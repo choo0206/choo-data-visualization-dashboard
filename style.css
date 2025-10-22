@@ -15,6 +15,45 @@ body {
   background-color: var(--background-color);;
   color: var(--text-color);
 }
+/* 📊 Main Content (Flexbox) */
+main {
+  /* ... โค้ดเดิม: padding, background-color, border-radius ... */
+  
+  /* ⚙️ การตั้งค่า Flexbox เพื่อให้เรียงกัน */
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: flex-start;
+  
+  /* 💡 ถ้าเมนูถูกย้ายไปด้านบน (ตามขั้นตอนที่แล้ว) ให้เหลือแค่โค้ดเหล่านี้ */
+  /* ถ้ายังไม่ได้ย้ายเมนู ให้ใช้โค้ดทั้งหมดที่รวมไว้ในขั้นตอนก่อนหน้า */
+}
+
+/* 🟥 สไตล์สำหรับ Card สี่เหลี่ยมจัตุรัส 200px */
+.card {
+  /* ... โค้ดเดิม: background-color, border, border-radius, box-shadow, transition ... */
+
+  /* 💡 จุดสำคัญ: การกำหนดให้เป็นสี่เหลี่ยมจัตุรัสและขนาดคงที่ */
+  flex: 0 0 200px; /* ความกว้างคงที่ 200px, ไม่ขยาย, ไม่หด */
+  height: 200px; /* <--- กำหนดความสูงให้เท่ากับความกว้าง */
+  
+  /* 💡 จัดเนื้อหาให้อยู่ตรงกลางของการ์ดเพื่อให้ดูดีขึ้น */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* ปรับ padding และ font-size ให้เหมาะสมกับกล่องที่เล็กลง */
+  padding: 15px; 
+}
+
+/* 📈 Chart Container (กราฟ) */
+.chart-container {
+  /* กราฟกินพื้นที่เต็มบรรทัดล่าง */
+  flex: 1 1 100%; 
+  /* ... โค้ดเดิม: background-color, padding, border-radius ... */
+}
 .page-header {
   background-color: #ffffff;
   padding: 20px;
