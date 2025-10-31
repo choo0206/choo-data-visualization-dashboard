@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #f88fc7;
+  --secondary-color: #DA70D6;
+  --background-color: #f7f2dd;
+  --surface-color: #c2dfdc;
+  --text-color: #0c0c0c;
+  --border-color: #aa8bae;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--background-color);;
+  color: var(--text-color);
+}
+
+.page-header {
+  background-color: #ffffff;
+  padding: 20px;
+}
+#page-title {
+  color: var(--primary-color); /* สีน้ําเงินเข้ม */
+  font-size: 24px;
+}
+.card {
+  background-color: var(--surface-color);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  margin: 10px;
+}
+UL,li,a {
+    text-decoration: none;
+    color: rgb(93, 68, 236);
+    -moz-text-decoration-line: none;
+}
+
+.Dashboard-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+    width: 250px;
+    padding: 20px;
+    background-color: var(--surface-color);
+}
+
+.main-content{
+    flex-grow: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.sidebar li a:hover{
+  background-color: rgb(193, 65, 212);
+}
+
+@media (max-width:768px) {
+  .Dashboard-container{
+    flex-direction: column;
+  }
+  .sidebar{
+    width: 100%;
+    padding: 10px;
+  }
+  .main-content{
+    grid-template-columns: 1fr;
+  }
+}
